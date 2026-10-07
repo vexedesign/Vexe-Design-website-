@@ -26,7 +26,9 @@
 // ---------------------------------------------------------------------------
 // 1. BUSINESS DETAILS
 // ---------------------------------------------------------------------------
-const domain = "vexedesign.com"; // Your final domain, with no "https://" and no "www".
+// Your main web address, with no "https://". It includes "www" because the
+// domain is set up on Vercel to redirect vexedesign.com to www.vexedesign.com.
+const domain = "www.vexedesign.com";
 
 export const siteConfig = {
   /** Your business name. Shown in the header, footer, page titles and emails. */

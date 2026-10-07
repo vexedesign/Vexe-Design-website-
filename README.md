@@ -34,7 +34,7 @@ Open **`site.config.ts`** in the project root. Every value is commented in plain
 | --------------------------------------- | ---------------------------------------------------------------- |
 | Business name                           | `businessName`                                                   |
 | Tagline (footer, search results)        | `tagline`                                                        |
-| **Domain**                              | `const domain = "vexedesign.com"` (top of the file)              |
+| **Domain**                              | `const domain = "www.vexedesign.com"` (top of the file)          |
 | Email shown on the site                 | `email`                                                          |
 | Phone (displayed)                       | `phone`                                                          |
 | Phone (tap-to-call link)                | `phoneHref`, e.g. `"tel:+447730424516"`, no spaces               |
@@ -132,8 +132,8 @@ Vercel makes Next.js and the free tier covers a site like this.
 
 ### Connecting your custom domain
 
-1. Set the domain in `site.config.ts` (`const domain = "vexedesign.com"`), commit and push.
-2. In Vercel: *Project → Settings → Domains → Add* → `vexedesign.com`. Also add `www.vexedesign.com` and choose to redirect it to the main domain.
+1. Set the domain in `site.config.ts` (`const domain = "www.vexedesign.com"`), commit and push. It should match the main address chosen in Vercel; Vercel recommends `www` and redirects the plain domain to it.
+2. In Vercel, open the project and click **Domains** in the left-hand menu → **Add Domain** → enter `vexedesign.com`, keep **Redirect apex domains to www** ticked and **Connect to an environment: Production**, then click **Add Domain**.
 3. Vercel shows the DNS records to add at your domain registrar. Typically:
    - `A` record for `@` → the IP address Vercel gives you
    - `CNAME` record for `www` → the target Vercel gives you
