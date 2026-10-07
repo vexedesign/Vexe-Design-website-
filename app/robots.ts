@@ -1,0 +1,11 @@
+import type { MetadataRoute } from "next";
+import { siteConfig } from "@/site.config";
+
+/** Served at /robots.txt. */
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: { userAgent: "*", allow: "/", disallow: ["/api/"] },
+    sitemap: `${siteConfig.siteUrl}/sitemap.xml`,
+    host: siteConfig.siteUrl,
+  };
+}
