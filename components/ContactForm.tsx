@@ -419,7 +419,7 @@ export function ContactForm({ defaultService = "", defaultBudget = "" }: Contact
                 )}
               </Button>
               <p className="max-w-xs text-xs leading-relaxed text-slate">
-                We only use your details to reply to this enquiry. See our{" "}
+                We use your details to respond to your enquiry. See our{" "}
                 <a href="/privacy" className="underline underline-offset-2 hover:text-ink">
                   privacy policy
                 </a>

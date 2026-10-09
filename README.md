@@ -189,7 +189,7 @@ Up to six are shown. While the list is empty, the grid shows brand compositions 
 
 - Page headers on Services, Pricing and Contact: the top of `app/services/page.tsx`, `app/pricing/page.tsx` and `app/contact/page.tsx`
 - "What happens next" steps on Contact: `nextSteps` in `app/contact/page.tsx`
-- Legal pages: `app/privacy/page.tsx`, `app/cookies/page.tsx`, `app/terms/page.tsx`
+- Legal pages: `app/privacy/page.tsx`, `app/cookies/page.tsx`, `app/terms/page.tsx`. Your company name, number and registered office come from `company` in `site.config.ts` (also shown in the footer, as UK law requires). When you change a legal page, update `LAST_UPDATED` at the top. Each page also has a `DRAFT` switch: setting it to `true` shows a review notice and hides the page from Google (remove it from `app/sitemap.ts` too).
 
 ---
 
@@ -202,7 +202,7 @@ Up to six are shown. While the list is empty, the grid shows brand compositions 
 - **Pricing:** three packages exactly as briefed. Enhanced is elevated, carries the "Most popular" badge and has a violet treatment. Pointer spotlight, disclaimer and FAQ.
 - **Enquiry form:** all nine fields, live and on-submit validation with clear messages, error summary, focus moved to the first problem, honeypot, success and failure states, pre-fill from pricing and service buttons (`/contact?package=enhanced`, `/contact?service=…`)
 - **Email:** Resend integration on the server, secret key kept in environment variables, rate limiting, Reply-To set to the customer
-- **SEO:** per-page titles and descriptions, canonical URLs, Open Graph and X cards, `sitemap.xml`, `robots.txt`, web manifest, structured data (`ProfessionalService` with the three packages as offers), semantic heading order. Legal placeholder pages are set to `noindex`.
+- **SEO:** per-page titles and descriptions, canonical URLs, Open Graph and X cards, `sitemap.xml`, `robots.txt`, web manifest, structured data (`ProfessionalService` with the three packages as offers), semantic heading order.
 - **Accessibility:** skip link, keyboard-friendly navigation, visible focus states, labelled fields with linked error messages, native `<details>` FAQ, mobile menu with Escape support and focus kept inside, reduced-motion support throughout
 - **Brand system:** colours sampled from the logo; the V's 17.5° stroke reused as the site's graphic motif (bullets, dividers, oversized hero and CTA marks)
 
@@ -221,7 +221,7 @@ Up to six are shown. While the list is empty, the grid shows brand compositions 
 
 - Portfolio: three "Coming soon" cards
 - Instagram: brand tiles until you add real posts
-- Legal pages: headings only, clearly marked. **Get professionally written text before launch.**
+- Legal pages: Privacy Policy, Cookie Policy and Terms & Conditions are written to UK law and live. The terms use default business choices (30-day quotes, 50% deposit, 14-day invoices, two revision rounds, 30-day fixes, support scope and response) that you can change in `app/terms/page.tsx`. Add your ICO fee reference to the privacy policy once you have one, and your VAT number to the terms if you register. Consider a quick professional review.
 - Logo: a faithful vector recreation from your PNG artwork. Swap in your original SVG when you have it.
 
 ### Environment variables
@@ -238,7 +238,7 @@ Up to six are shown. While the list is empty, the grid shows brand compositions 
 
 1. Set up Resend and send yourself a test enquiry on the live site.
 2. Add your real logo SVG, if you have the master file.
-3. Commission the legal pages. If you add analytics, add a cookie consent banner.
+3. Finish the legal pages (fill in the highlighted items). If you ever add analytics, embeds or a chat widget, update the Cookie Policy and add a consent banner **before** they go live.
 4. Replace the portfolio cards as your first projects go live. Real work will do more for conversions than anything else. A testimonials section can be added later once you have genuine client quotes.
 5. Create a Google Business Profile and make sure the name, phone and website match this site exactly.
 6. Add privacy-friendly analytics (for example Vercel Analytics or Plausible) to see which pages bring enquiries.

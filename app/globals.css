@@ -342,3 +342,69 @@
 :root {
   interpolate-size: allow-keywords;
 }
+
+/* Long-form legal pages (components/LegalDocument.tsx). */
+.legal-prose {
+  max-width: 44rem;
+  color: var(--slate);
+}
+.legal-prose h2 {
+  margin-top: 3.5rem;
+  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  color: var(--ink);
+}
+.legal-prose h3 {
+  margin-top: 1.75rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.legal-prose p,
+.legal-prose ul,
+.legal-prose table {
+  margin-top: 1rem;
+}
+.legal-prose ul {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.legal-prose li::marker {
+  color: var(--accent);
+}
+.legal-prose strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+.legal-prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--accent) 55%, transparent);
+  text-underline-offset: 3px;
+}
+.legal-prose a:hover {
+  text-decoration-color: var(--accent);
+}
+.legal-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.legal-prose th,
+.legal-prose td {
+  padding: 0.75rem 0.75rem 0.75rem 0;
+  border-bottom: 1px solid var(--line-light);
+  text-align: left;
+  vertical-align: top;
+}
+.legal-prose th {
+  color: var(--ink);
+  font-weight: 600;
+}
+.legal-prose .fill {
+  background: color-mix(in oklab, #f5c518 35%, transparent);
+  color: var(--ink);
+  border-radius: 0.25rem;
+  padding: 0 0.25rem;
+}

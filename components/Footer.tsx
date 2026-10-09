@@ -4,6 +4,7 @@ import { Logo } from "@/components/Logo";
 
 export function Footer() {
   const { links, legal } = siteConfig.nav;
+  const { company } = siteConfig;
   const columnTitle = "mb-5 text-sm font-medium text-fog";
   const linkClass = "link-draw text-white/90 hover:text-white";
 
@@ -73,9 +74,16 @@ export function Footer() {
       <div className="container-x">
         <div className="slash-rule w-full opacity-40" aria-hidden="true" />
         <div className="flex flex-col gap-3 py-7 text-sm text-fog sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {siteConfig.copyrightYear} {siteConfig.businessName}. All rights reserved.
-          </p>
+          <div className="grid gap-1.5">
+            <p>
+              © {siteConfig.copyrightYear} {company.legalName}. All rights reserved.
+            </p>
+            {/* Company details UK law requires on a limited company's website. */}
+            <p>
+              Registered in {company.registeredIn}, company number {company.number}. Registered office:{" "}
+              {company.registeredOffice}.
+            </p>
+          </div>
           <a href="#main" className="link-draw self-start text-white/80 hover:text-white sm:self-auto">
             Back to top
           </a>

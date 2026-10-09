@@ -7,7 +7,7 @@
  *  ("like this"), save the file, and the site updates.
  *
  *  Quick map of this file:
- *    1. BUSINESS      name, domain, email, phone, Instagram
+ *    1. BUSINESS      name, domain, email, phone, Instagram, company details
  *    2. BRAND ASSETS  logo, favicon, hero image, social sharing image
  *    3. COLOURS       the whole colour palette
  *    4. SEO           page titles and descriptions
@@ -60,6 +60,18 @@ export const siteConfig = {
 
   /** Year shown in the copyright line. */
   copyrightYear: 2026,
+
+  /**
+   * Your limited company, exactly as registered at Companies House. UK law
+   * requires these details on your website; they appear in the footer and on
+   * the legal pages. Check them at find-and-update.company-information.service.gov.uk
+   */
+  company: {
+    legalName: "Vexe Design Ltd",
+    number: "17506103",
+    registeredIn: "England and Wales",
+    registeredOffice: "1 Waterloo Road, Southport, PR8 2HN",
+  },
 
   // -------------------------------------------------------------------------
   // 2. BRAND ASSETS: replace the files in /public/images with your own,
