@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { CSSProperties } from "react";
 import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
+import Script from "next/script";
 import { siteConfig } from "@/site.config";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -93,6 +94,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        {/* Vercel Web Analytics: privacy-friendly, cookieless visitor counts (enable in Vercel > Analytics) */}
+        <Script id="vercel-analytics-init" strategy="afterInteractive">
+          {`window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`}
+        </Script>
+        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
       </body>
     </html>
   );
